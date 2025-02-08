@@ -3,8 +3,8 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 tasks = [
-    {"id": 1, "title": "Buy groceries", "completed": False},
-    {"id": 2, "title": "Do laundry", "completed": False}
+    {"id": 1, "title": "Design HLD", "completed": False},
+    {"id": 2, "title": "Implement backend", "completed": False}
 ]
 
 @app.route('/tasks', methods=['GET'])
