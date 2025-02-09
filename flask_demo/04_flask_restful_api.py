@@ -9,9 +9,9 @@ tasks = [
 
 def add_links_to_task(task):
     task['links'] = {
-        'self': f"/tasks/{task['id']}",
-        'update': f"/tasks/{task['id']}",
-        'delete': f"/tasks/{task['id']}"
+        'self': f"/tasks_restful/{task['id']}",
+        'update': f"/tasks_restful/{task['id']}",
+        'delete': f"/tasks_restful/{task['id']}"
     }
     return task
 
