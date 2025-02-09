@@ -1,66 +1,78 @@
-"# rest_api_demo" 
+# 🚀 REST API Demo
 
-API fogalma: Application Programming Interface
-Egy olyan interface, amely lehetővé teszi kölönböző szoftverek és rendszerek közötti 
-kommunikációt szabványosított formában.
+## 📌 API fogalma
+**API (Application Programming Interface)** egy olyan interfész, amely lehetővé teszi különböző szoftverek és rendszerek közötti **szabványosított kommunikációt**.
 
-Interface: Az API egy meghatározott módot biztosít az adatok lekérdezésére és küldésére.
-Abstraction: Az API "elrejti" az implementációs logikát és egy könnyen használható réteget biztosít.
-Standardization: Meghatározott protokollokat és formátumokat használ. pl. Rest, SOAP, GraphQL
+### 🔹 API fő jellemzői:
+- **Interface** – Adatok lekérdezésére és küldésére szolgáló interfész.
+- **Abstraction** – Elrejti az implementációs logikát, egyszerűsítve a használatot.
+- **Standardization** – Meghatározott protokollokat és formátumokat használ *(pl. REST, SOAP, GraphQL).*  
 
-*********************************************************************************************
-API típusok:
-REST API – HTTP alapú, JSON-t vagy XML-t használ adatcserére.
-GraphQL API – Rugalmas adatlekérdezési mód, ahol a kliens határozza meg, milyen adatokat kér el.
-SOAP API – XML alapú, szigorúbb struktúrával.
-*********************************************************************************************
-Mitől lesz Rest a Rest API?
-A REST (Representational State Transfer) egy architekturális pattern
-Olyan szabályokat és elveket fogalmaz meg a REST, amelyeket az API-nak követnie kell ahhoz,
-hogy skálázható, rugalmas és jól használható legyen.
+---
 
-Alapelvek:
-Állapotmentesség (Stateless) - A Szerver nem tárol semmilyen kliensoldali állapotot a kérések között, minden kérésnek tartalmaznia kell a szükséges adatokat. Pl. tokenek, inputok.
+## 🌍 API típusok
 
-Erőforrások (Resources) URL-ekhez rendelése - Minden erőforrásnak egye egyedi URL címe van - pl. /task/1
+| Típus        | Leírás |
+|-------------|---------|
+| **REST API** | HTTP-alapú, JSON/XML formátumú adatcsere. |
+| **GraphQL API** | Rugalmas lekérdezési mód, ahol a kliens határozza meg a kért adatokat. |
+| **SOAP API** | XML-alapú, szigorúbb struktúrával rendelkező protokoll. |
 
-HTTP metódusok használata (GET, POST, PUT, DELETE)
+---
 
-Kliens-szerver architektúra - MVC, MVT pattern: szerver az adatok eléréséért felel, a kliens a feldolgozásért és megjelenítésért
+## 🔥 Mitől lesz REST a REST API?
+A **REST (Representational State Transfer)** egy **architekturális minta**, amely biztosítja az API **skálázhatóságát, rugalmasságát és használhatóságát**.
 
-Cache-elhetőség - Az API válaszai cachelhetőek, így csökkenthető a szerver terhelése
+### 🛠 Alapelvek:
 
-Hiperhivatkozások (HATEOAS) -Az API válaszai tartalmazhatnak linkeket (hiperhivatkozásokat), amelyek segítenek a klienseknek a további elérhető műveletek felfedezésében
-*********************************************************************************************
+✅ **Állapotmentesség (Stateless)** – A szerver nem tárol kliensoldali állapotot a kérések között. *(Pl.: tokenek, inputok minden kérésben szerepelnek.)*  
+✅ **Erőforrások (Resources) URL-ekhez rendelése** – Egyedi URL minden erőforrásra *(pl. `/tasks/1`).*  
+✅ **HTTP metódusok használata** – *GET, POST, PUT, DELETE stb.*  
+✅ **Kliens-szerver architektúra** – Elkülönül a kliens és szerver logikája *(MVC, MVT minták).*  
+✅ **Cache-elhetőség** – A válaszok cachelhetők a szerver terhelésének csökkentése érdekében.  
+✅ **HATEOAS (Hypermedia as the Engine of Application State)** – Az API válaszai **linkeket tartalmazhatnak**, segítve a klienst a további műveletek felfedezésében.  
 
-Mire nem való az API?
-API-k nem megfelelőek olyan esetekben, amikor:
-✅ Valós idejű, folyamatos adatáramlás kell → WebSocket, gRPC, Kafka
-✅ Nagy fájlokat kell kezelni → CDN, Cloud Storage
-✅ Hosszú futásidejű folyamatokat kell kezelni → Üzenetsorok aszinkron feldolgozással (Celery, RabbitMQ),
-                                                  Batchelt feldolgozás
-✅ Statikus adatokat kell szolgáltatni → Statikus HTML/CSS/JS fájlok vagy JSON fájlok CDN-en keresztül.
-                                          Edge Computing és caching (pl. Cloudflare, Varnish).
-✅ Adatbázis közvetlen elérése API-val → ORM, GraphQL
+---
 
-*********************************************************************************************
-Mi az a GraphQL?
-A GraphQL egy adatlekérdezési nyelv (query language) és egy API futtatási környezet
+## ❌ Mire **nem való** az API?
 
-📌 Főbb jellemzők:
-✔ Deklaratív lekérdezések – A kliens határozza meg, milyen adatokat szeretne.
-✔ Egyetlen végpont (/graphql) – Nincs több különálló REST végpont.
-✔ Erőforrások összekapcsolása – Egyetlen kérésben több kapcsolódó adat lekérhető.
-✔ Erősen típusos séma – A szerver előre meghatározza az adatok struktúráját.
+🚫 **Valós idejű adatáramlás** → **WebSocket, gRPC, Kafka** megfelelőbb.  
+🚫 **Nagy fájlok kezelése** → **CDN, Cloud Storage** javasolt.  
+🚫 **Hosszú futásidejű folyamatok** → **Aszinkron feldolgozás (Celery, RabbitMQ, Batch Processing).**  
+🚫 **Statikus adatok szolgáltatása** → **CDN, Cloudflare, statikus fájlok.**  
+🚫 **Közvetlen adatbázis-hozzáférés** → **ORM, GraphQL jobb választás.**  
 
-✔ GraphQL-t használj, ha...
-✅ A kliensek eltérő adatokat igényelnek.
-✅ Több erőforrást akarsz egyetlen kérésben lekérni.
-✅ Pontosan szeretnéd kontrollálni, milyen adatot kér le a kliens.
-✅ Öndokumentáló és típusos API-ra van szükség.
+---
 
-❌ REST API-t használj, ha...
-✅ Egyszerű CRUD API-ra van szükséged.
-✅ Cache-elés és teljesítmény kiemelten fontos.
-✅ Nagy fájlokat kell kezelni.
-✅ A szerver teljesítményének optimalizálása kritikus szempont.
+## 🔷 **Mi a GraphQL?**
+
+A **GraphQL** egy **adatlekérdezési nyelv (query language)** és egy **API futtatási környezet**, amelyet a **Facebook fejlesztett** ki.  
+
+### 📌 **Főbb jellemzők:**
+✔ **Deklaratív lekérdezések** – A kliens határozza meg, milyen adatokat kér.  
+✔ **Egyetlen végpont (`/graphql`)** – Nincs több REST végpont.  
+✔ **Erőforrások összekapcsolása** – Egy kérésben több adat is lekérhető.  
+✔ **Erősen típusos séma** – Az API előre meghatározza az adatok struktúráját.  
+
+---
+
+## ✅ **Mikor használjunk GraphQL-t?**
+
+✔ Ha a kliensek eltérő adatokat igényelnek.  
+✔ Ha több erőforrást szeretnénk egyetlen kérésben lekérni.  
+✔ Ha pontosan szeretnénk kontrollálni, milyen adatokat kap a kliens.  
+✔ Ha **önállóan dokumentálódó és típusos API**-ra van szükség.  
+
+---
+
+## ❌ **Mikor válassz inkább REST API-t?**
+
+🚀 **Egyszerű CRUD API** esetén.  
+🚀 **Cache-elés és teljesítmény** szempontjából REST előnyösebb.  
+🚀 **Nagy fájlok** kezelésére.  
+🚀 **Ha a szerver teljesítményét optimalizálni kell.**  
+
+---
+
+💡 **Összegzés**: **GraphQL-t** dinamikus, kliens-központú API-khoz használj, míg **REST** a gyors, egyszerű és skálázható megoldás! 🚀
+
