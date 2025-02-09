@@ -1,7 +1,4 @@
 # 📖 API DOKUMENTÁCIÓ
-
-Üdvözlünk az API dokumentációban! Itt megtalálhatod az API-k működésével kapcsolatos összes fontos információt és a bemutató anyagokat.  
-
 ---
 
 ## 📌 Tartalomjegyzék  
