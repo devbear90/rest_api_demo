@@ -454,129 +454,171 @@
 			"name": "DJANGO",
 			"item": [
 				{
-					"name": "jwt_token",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "http://127.0.0.1:8000/api/token/"
-					},
-					"response": []
+					"name": "Basic authentication",
+					"item": [
+						{
+							"name": "basic_auth_on_endpoint",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"password": "kakarotto",
+										"username": "rickovacs"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/datasets/"
+							},
+							"response": []
+						}
+					]
 				},
 				{
-					"name": "token_authentication",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+					"name": "Basic Token Authentication",
+					"item": [
+						{
+							"name": "token_authentication",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/token-auth/"
+							},
+							"response": []
 						},
-						"url": "http://127.0.0.1:8000/api/token-auth/"
-					},
-					"response": []
+						{
+							"name": "basic_token_on_endpoint",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token cf40a581fed923c2f7436dc91fe8500c6d5fa3ee",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/datasets/"
+							},
+							"response": []
+						}
+					]
 				},
 				{
-					"name": "jwt_token_on_endpoint",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzAyMjM3LCJpYXQiOjE3MzkzMDE5MzcsImp0aSI6Ijk5Yjk1YmY0NTliZTQ4MDg5NTIzYTBhYjBjZTRhZjgzIiwidXNlcl9pZCI6MX0.Py76405qpR-QxWvsgOa5XTNISPPqBV2O_txu-VDWQTw",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+					"name": "JWT token authentication",
+					"item": [
+						{
+							"name": "jwt_token",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/token/"
+							},
+							"response": []
 						},
-						"url": "http://127.0.0.1:8000/api/datasets/"
-					},
-					"response": []
-				},
-				{
-					"name": "basic_token_on_endpoint",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Token cf40a581fed923c2f7436dc91fe8500c6d5fa3ee",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+						{
+							"name": "jwt_token_on_endpoint",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzAyMjM3LCJpYXQiOjE3MzkzMDE5MzcsImp0aSI6Ijk5Yjk1YmY0NTliZTQ4MDg5NTIzYTBhYjBjZTRhZjgzIiwidXNlcl9pZCI6MX0.Py76405qpR-QxWvsgOa5XTNISPPqBV2O_txu-VDWQTw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/datasets/"
+							},
+							"response": []
 						},
-						"url": "http://127.0.0.1:8000/api/datasets/"
-					},
-					"response": []
-				},
-				{
-					"name": "basic_auth_on_endpoint Copy",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "basic",
-							"basic": {
-								"password": "kakarotto",
-								"username": "rickovacs"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "http://127.0.0.1:8000/api/datasets/"
-					},
-					"response": []
+						{
+							"name": "jwt_token_on_endpoint_long_running_process",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzA2MjA2LCJpYXQiOjE3MzkzMDYwODYsImp0aSI6IjQ3NDM1OTBmYjNhOTQwOTY5OWE5ZWI3YTJjOWQzYTJmIiwidXNlcl9pZCI6MX0.jr68zmSD_hxyKtawYHZlOYf-5A5vgfP_rYyqYm8pug4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://127.0.0.1:8000/api/long-process/"
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
