@@ -11,3 +11,6 @@
 
 3. [🔑 Django Authentication dokumentáció](DJANGO_AUTHENTICATION.md)  
    *Részletes leírás a Django keretrendszer Authentikációs alap lehetőségeiről.*  
+
+4. [🛡️ Django Authorization Example](DJANGO_AUTHORIZATION.md)  
+   *Példák a Django Authorization lehetőségeiről.*  
