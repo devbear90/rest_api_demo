@@ -1,14 +1,19 @@
 import time
+import datetime
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
 
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated
-from .models import LargeDataset
-from .serializers import LargeDatasetSerializer
+from .models import LargeDataset, Post
+from .serializers import LargeDatasetSerializer, PostSerializer
 
+
+from rest_framework.viewsets import GenericViewSet
 from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
+from .permissions import IsPostAuthor
+import time
 
 
 class LargeDatasetViewSet(viewsets.ModelViewSet):
@@ -67,13 +72,9 @@ class LongRunningViewSet(viewsets.ViewSet):
         return Response({"message": "Process completed", "elapsed_time": elapsed_time})
     
 
-from rest_framework.viewsets import GenericViewSet
-from rest_framework.decorators import action
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-import time
 
-class LongRunningViewSet2(GenericViewSet):  # 🔹 ViewSet helyett GenericViewSet
+
+class LongRunningViewSet2(GenericViewSet):
     permission_classes = [IsAuthenticated]
 
     @action(detail=False, methods=["get"])
@@ -87,3 +88,32 @@ class LongRunningViewSet2(GenericViewSet):  # 🔹 ViewSet helyett GenericViewSe
         elapsed_time = end_time - start_time
 
         return Response({"message": "Process completed", "elapsed_time": elapsed_time})
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    serializer_class = PostSerializer
+    permission_classes = [IsAuthenticated, IsPostAuthor]
+
+    def get_queryset(self):
+        return Post.objects.filter(author=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+    def update(self, request, *args, **kwargs):
+        """Poszt módosítása részlegesen (PATCH) vagy teljesen (PUT)"""
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        
+        serializer = self.get_serializer(
+            instance, 
+            data=request.data, 
+            partial=partial
+        )
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        
+        return Response(serializer.data)
+
+    def perform_update(self, serializer):
+        serializer.save(updated_at=datetime.datetime.now())
