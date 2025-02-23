@@ -5,16 +5,13 @@ import random
 import uuid
 from django.utils import timezone
 
-# 🔹 Django projekt gyökérmappájának beállítása
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 print(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-# 🔹 Django beállítások betöltése
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bigdata_api.settings")
 
 django.setup()
 
-# 🔹 Modellek importálása
 from api.models import LargeDataset
 
 def generate_unique_sku():
@@ -23,7 +20,6 @@ def generate_unique_sku():
     """
     return f"SKU-{uuid.uuid4().hex[:12]}"
 
-# 🔹 Véletlenszerű adatgenerálás
 def generate_large_dataset_records(n=10000):
     records = []
     for i in range(n):
@@ -68,15 +64,14 @@ def generate_large_dataset_records(n=10000):
         records.append(record)
     return records
 
-# 🔹 Rekordok betöltése Django ORM-mel
 def load_data():
-    batch_size = 10000  # Egyszerre mentett rekordok száma
-    total_records = 500000  # Összes rekord száma
+    batch_size = 10000
+    total_records = 500000
 
     for i in range(0, total_records, batch_size):
         print(f"Feltöltés: {i}-{i+batch_size}")
         batch = generate_large_dataset_records(batch_size)
-        LargeDataset.objects.bulk_create(batch, ignore_conflicts=True)  # Megelőzi a hibát
+        LargeDataset.objects.bulk_create(batch, ignore_conflicts=True)
 
 if __name__ == "__main__":
     load_data()
