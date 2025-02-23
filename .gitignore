@@ -2,3 +2,4 @@ django_env
 flask_env
 **__pycache__**
 .vscode/launch.json
+bigdata_api/db.sqlite3
