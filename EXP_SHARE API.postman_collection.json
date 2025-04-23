@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "366ace4b-e457-4d42-a60d-560c0687158a",
 		"name": "EXP_SHARE API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "39953509",
 		"_collection_link": "https://data-engineers-9958.postman.co/workspace/Data-Engineers-Workspace~e621ebbe-0f7c-4c53-a8fe-1b1cb740d93d/collection/39953509-366ace4b-e457-4d42-a60d-560c0687158a?action=share&source=collection_link&creator=39953509"
 	},
@@ -30,7 +30,16 @@
 										}
 									}
 								},
-								"url": "localhost:5000/task_manager"
+								"url": {
+									"raw": "localhost:5000/task_manager",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"task_manager"
+									]
+								}
 							},
 							"response": []
 						},
@@ -51,7 +60,16 @@
 										}
 									}
 								},
-								"url": "localhost:5000/task_manager"
+								"url": {
+									"raw": "localhost:5000/task_manager",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"task_manager"
+									]
+								}
 							},
 							"response": []
 						},
@@ -117,7 +135,16 @@
 										}
 									}
 								},
-								"url": "localhost:5000/task_manager_method"
+								"url": {
+									"raw": "localhost:5000/task_manager_method",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"task_manager_method"
+									]
+								}
 							},
 							"response": []
 						},
@@ -135,7 +162,16 @@
 										}
 									}
 								},
-								"url": "localhost:5000/task_manager_method"
+								"url": {
+									"raw": "localhost:5000/task_manager_method",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"task_manager_method"
+									]
+								}
 							},
 							"response": []
 						},
@@ -153,7 +189,16 @@
 										}
 									}
 								},
-								"url": "localhost:5000/task_manager_method"
+								"url": {
+									"raw": "localhost:5000/task_manager_method",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"task_manager_method"
+									]
+								}
 							},
 							"response": []
 						}
@@ -167,7 +212,16 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "localhost:5000/get_tasks"
+								"url": {
+									"raw": "localhost:5000/get_tasks",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"get_tasks"
+									]
+								}
 							},
 							"response": []
 						},
@@ -185,7 +239,16 @@
 										}
 									}
 								},
-								"url": "localhost:5000/create_task"
+								"url": {
+									"raw": "localhost:5000/create_task",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"create_task"
+									]
+								}
 							},
 							"response": []
 						},
@@ -203,7 +266,16 @@
 										}
 									}
 								},
-								"url": "localhost:5000/delete_task"
+								"url": {
+									"raw": "localhost:5000/delete_task",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"delete_task"
+									]
+								}
 							},
 							"response": []
 						}
@@ -219,7 +291,16 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:5000/tasks"
+						"url": {
+							"raw": "localhost:5000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks"
+							]
+						}
 					},
 					"response": []
 				},
@@ -228,7 +309,17 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:5000/tasks/3"
+						"url": {
+							"raw": "localhost:5000/tasks/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -246,7 +337,16 @@
 								}
 							}
 						},
-						"url": "localhost:5000/tasks"
+						"url": {
+							"raw": "localhost:5000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks"
+							]
+						}
 					},
 					"response": []
 				},
@@ -264,7 +364,17 @@
 								}
 							}
 						},
-						"url": "localhost:5000/tasks/2"
+						"url": {
+							"raw": "localhost:5000/tasks/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -282,7 +392,17 @@
 								}
 							}
 						},
-						"url": "localhost:5000/tasks/2"
+						"url": {
+							"raw": "localhost:5000/tasks/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks",
+								"1"
+							]
+						}
 					},
 					"response": []
 				}
@@ -296,7 +416,16 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:5000/tasks_restful"
+						"url": {
+							"raw": "localhost:5000/tasks_restful",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_restful"
+							]
+						}
 					},
 					"response": []
 				},
@@ -305,7 +434,17 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "localhost:5000/tasks_restful/1"
+						"url": {
+							"raw": "localhost:5000/tasks_restful/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_restful",
+								"1"
+							]
+						}
 					},
 					"response": []
 				},
@@ -323,7 +462,16 @@
 								}
 							}
 						},
-						"url": "localhost:5000/tasks"
+						"url": {
+							"raw": "localhost:5000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks"
+							]
+						}
 					},
 					"response": []
 				},
@@ -341,7 +489,17 @@
 								}
 							}
 						},
-						"url": "localhost:5000/tasks_restful/2"
+						"url": {
+							"raw": "localhost:5000/tasks_restful/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_restful",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -359,7 +517,17 @@
 								}
 							}
 						},
-						"url": "localhost:5000/tasks_restful/3"
+						"url": {
+							"raw": "localhost:5000/tasks_restful/3",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_restful",
+								"3"
+							]
+						}
 					},
 					"response": []
 				}
@@ -380,7 +548,16 @@
 								"variables": ""
 							}
 						},
-						"url": "localhost:5000/tasks_graphql"
+						"url": {
+							"raw": "localhost:5000/tasks_graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_graphql"
+							]
+						}
 					},
 					"response": []
 				},
@@ -396,7 +573,16 @@
 								"variables": ""
 							}
 						},
-						"url": "localhost:5000/tasks_graphql"
+						"url": {
+							"raw": "localhost:5000/tasks_graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_graphql"
+							]
+						}
 					},
 					"response": []
 				},
@@ -412,7 +598,16 @@
 								"variables": ""
 							}
 						},
-						"url": "localhost:5000/tasks_graphql"
+						"url": {
+							"raw": "localhost:5000/tasks_graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_graphql"
+							]
+						}
 					},
 					"response": []
 				},
@@ -428,7 +623,16 @@
 								"variables": ""
 							}
 						},
-						"url": "localhost:5000/tasks_graphql"
+						"url": {
+							"raw": "localhost:5000/tasks_graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_graphql"
+							]
+						}
 					},
 					"response": []
 				},
@@ -444,7 +648,16 @@
 								"variables": ""
 							}
 						},
-						"url": "localhost:5000/tasks_graphql"
+						"url": {
+							"raw": "localhost:5000/tasks_graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks_graphql"
+							]
+						}
 					},
 					"response": []
 				}
@@ -454,169 +667,977 @@
 			"name": "DJANGO",
 			"item": [
 				{
-					"name": "Basic authentication",
+					"name": "Authentication",
 					"item": [
 						{
-							"name": "basic_auth_on_endpoint",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": {
-										"password": "kakarotto",
-										"username": "rickovacs"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "Basic authentication",
+							"item": [
+								{
+									"name": "basic_auth_on_endpoint",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "rickovacs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/datasets/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"datasets",
+												""
+											]
 										}
-									}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Basic Token Authentication",
+							"item": [
+								{
+									"name": "token_authentication",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/token-auth/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"token-auth",
+												""
+											]
+										}
+									},
+									"response": []
 								},
-								"url": "http://127.0.0.1:8000/api/datasets/"
-							},
-							"response": []
+								{
+									"name": "basic_token_on_endpoint",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token cf748e7954737e3f900c1c051197d3f4ccac0824",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/datasets/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"datasets",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "JWT token authentication",
+							"item": [
+								{
+									"name": "jwt_token",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/token/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"token",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "jwt_token_on_endpoint",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzAyMjM3LCJpYXQiOjE3MzkzMDE5MzcsImp0aSI6Ijk5Yjk1YmY0NTliZTQ4MDg5NTIzYTBhYjBjZTRhZjgzIiwidXNlcl9pZCI6MX0.Py76405qpR-QxWvsgOa5XTNISPPqBV2O_txu-VDWQTw",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/datasets/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"datasets",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "jwt_token_on_endpoint_long_running_process",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzA2MjA2LCJpYXQiOjE3MzkzMDYwODYsImp0aSI6IjQ3NDM1OTBmYjNhOTQwOTY5OWE5ZWI3YTJjOWQzYTJmIiwidXNlcl9pZCI6MX0.jr68zmSD_hxyKtawYHZlOYf-5A5vgfP_rYyqYm8pug4",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/long-process/",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"long-process",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				},
 				{
-					"name": "Basic Token Authentication",
+					"name": "Authorization",
 					"item": [
 						{
-							"name": "token_authentication",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "Object_level_permissions",
+							"item": [
+								{
+									"name": "isPostAuthor - list - get",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "almafa",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8000/api/posts",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": "http://127.0.0.1:8000/api/token-auth/"
-							},
-							"response": []
+								{
+									"name": "isPostAuthor - create-update",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "almafa",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Karcsi postja\",\r\n    \"content\": \"Ez egy teszt tartalom...\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/posts/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
-							"name": "basic_token_on_endpoint",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Token cf40a581fed923c2f7436dc91fe8500c6d5fa3ee",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "Group_level_permissions",
+							"item": [
+								{
+									"name": "GET - Post Editor",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8000/api/posts_editor",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts_editor"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": "http://127.0.0.1:8000/api/datasets/"
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "JWT token authentication",
-					"item": [
-						{
-							"name": "jwt_token",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
+								{
+									"name": "GET - Post Editor Copy",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8000/api/posts_editor",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts_editor"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": "http://127.0.0.1:8000/api/token/"
-							},
-							"response": []
+								{
+									"name": "POST - Post Editor not working",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Ez egy teszt\",\r\n    \"content\": \"Nem is tudom, hogy most mi legyen\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/posts_editor/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts_editor",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
-							"name": "jwt_token_on_endpoint",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzAyMjM3LCJpYXQiOjE3MzkzMDE5MzcsImp0aSI6Ijk5Yjk1YmY0NTliZTQ4MDg5NTIzYTBhYjBjZTRhZjgzIiwidXNlcl9pZCI6MX0.Py76405qpR-QxWvsgOa5XTNISPPqBV2O_txu-VDWQTw",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"username\": \"rickovacs\",\r\n  \"password\": \"kakarotto\"\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "Custom_object_permission",
+							"item": [
+								{
+									"name": "GET - Post custom object permission",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "test_user",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8000/api/posts_custom_object",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts_custom_object"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": "http://127.0.0.1:8000/api/datasets/"
-							},
-							"response": []
+								{
+									"name": "POST - Post Editor not working Copy",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "test_user",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Ez egy teszt 2\",\r\n    \"content\": \"Nem is tudom, hogy most mi legyen\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/posts_custom_object/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts_custom_object",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "DELETE - Post Editor not working Copy 2",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "cafu",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/posts_custom_object/5/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"posts_custom_object",
+												"5",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						},
 						{
-							"name": "jwt_token_on_endpoint_long_running_process",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM5MzA2MjA2LCJpYXQiOjE3MzkzMDYwODYsImp0aSI6IjQ3NDM1OTBmYjNhOTQwOTY5OWE5ZWI3YTJjOWQzYTJmIiwidXNlcl9pZCI6MX0.jr68zmSD_hxyKtawYHZlOYf-5A5vgfP_rYyqYm8pug4",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
+							"name": "Model permission",
+							"item": [
+								{
+									"name": "GET - Post custom object permission Copy",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												},
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8000/api/reports",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"reports"
+											]
 										}
-									}
+									},
+									"response": []
 								},
-								"url": "http://127.0.0.1:8000/api/long-process/"
-							},
-							"response": []
+								{
+									"name": "POST- Post Editor not working Copy 2",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Model permission teszt\",\r\n    \"content\": \"Nem is tudom, hogy most mi legyen\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/reports/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"reports",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Row-level permission handling",
+							"item": [
+								{
+									"name": "GET - Tasks",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "test_user",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8000/api/tasks",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"tasks"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST - Tasks",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "rickovacs",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Rickovacs rekordja 4\",\r\n    \"description\": \"Ezt csak Rickovacs és az Admin tudja módosítani\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/tasks/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"tasks",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Request Context Permission",
+							"item": [
+								{
+									"name": "GET - Notice",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "cafu",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-ACCESS-LEVEL",
+												"value": "trusted",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8000/api/notices",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"notices"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST - Notice",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-ACCESS-LEVEL",
+												"value": "trusted",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"message\": \"Ez csak Karcsi üzenete\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/notices/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"notices",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "TOKEN based permission",
+							"item": [
+								{
+									"name": "GET -secure-data",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "cafu",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "X-ACCESS-LEVEL",
+												"value": "trusted",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8000/api/secure-data",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"secure-data"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST - secure-data",
+									"request": {
+										"auth": {
+											"type": "basic",
+											"basic": [
+												{
+													"key": "username",
+													"value": "karcsi",
+													"type": "string"
+												},
+												{
+													"key": "password",
+													"value": "kakarotto",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "X-ACCESS-LEVEL",
+												"value": "trusted",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"message\": \"Ez csak Karcsi üzenete\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/secure-data/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"secure-data",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
 						}
 					]
 				}

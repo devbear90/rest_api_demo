@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib import admin
 
 class LargeDataset(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -62,3 +63,44 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Report(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title
+    
+class Task(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    assigned_to = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+    
+class Notice(models.Model):
+    message = models.TextField()
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Notice {self.id}"
+    
+
+class APIKey(models.Model):
+    name = models.CharField(max_length=100)
+    key = models.CharField(max_length=100, unique=True)
+    is_active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f"{self.name} ({'active' if self.is_active else 'inactive'})"
+    
+class SecureData(models.Model):
+    label = models.CharField(max_length=100)
+    value = models.TextField()
+
+    def __str__(self):
+        return self.label

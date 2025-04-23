@@ -5,16 +5,27 @@ from rest_framework.response import Response
 
 
 from rest_framework import viewsets
-from .models import LargeDataset, Post
-from .serializers import LargeDatasetSerializer, PostSerializer
+from .models import LargeDataset, Post, Report, Task, Notice, SecureData
+from .serializers import (LargeDatasetSerializer,
+                          PostSerializer,
+                          ReportSerializer,
+                          TaskSerializer,
+                          NoticeSerializer,
+                          SecureDataSerializer)
 
+from rest_framework.permissions import DjangoModelPermissions
 
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
-from .permissions import IsPostAuthor
+from .permissions import (IsPostAuthor,
+                          IsInEditorsGroup,
+                          IsAdminOrChangeOnly,
+                          IsOwnerOrAdmin,
+                          IsWorkingHours,
+                          HasTrustedHeader,
+                          HasValidAPIKeyFromDB)
 import time
-
 
 class LargeDatasetViewSet(viewsets.ModelViewSet):
     queryset = LargeDataset.objects.all()
@@ -70,9 +81,6 @@ class LongRunningViewSet(viewsets.ViewSet):
         elapsed_time = end_time - start_time
 
         return Response({"message": "Process completed", "elapsed_time": elapsed_time})
-    
-
-
 
 class LongRunningViewSet2(GenericViewSet):
     permission_classes = [IsAuthenticated]
@@ -117,3 +125,55 @@ class PostViewSet(viewsets.ModelViewSet):
 
     def perform_update(self, serializer):
         serializer.save(updated_at=datetime.datetime.now())
+
+class PostViewSet2(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsInEditorsGroup]
+
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+class PostViewSet3(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsAdminOrChangeOnly]
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+class ReportViewSet(viewsets.ModelViewSet):
+    queryset = Report.objects.all()
+    serializer_class = ReportSerializer
+    permission_classes = [DjangoModelPermissions]
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
+
+
+class TaskViewSet(viewsets.ModelViewSet):
+    serializer_class = TaskSerializer
+    permission_classes = [IsAuthenticated, IsOwnerOrAdmin]
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return Task.objects.all()
+        return Task.objects.filter(assigned_to=user)
+
+    def perform_create(self, serializer):
+        serializer.save(assigned_to=self.request.user)
+
+class NoticeViewSet(viewsets.ModelViewSet):
+    queryset = Notice.objects.all()
+    serializer_class = NoticeSerializer
+    permission_classes = [IsAuthenticated, IsWorkingHours, HasTrustedHeader]
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
+
+class SecureDataViewSet(viewsets.ModelViewSet):
+    queryset = SecureData.objects.all()
+    serializer_class = SecureDataSerializer
+    permission_classes = [HasValidAPIKeyFromDB]
