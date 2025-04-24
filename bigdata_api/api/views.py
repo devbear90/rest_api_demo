@@ -109,7 +109,6 @@ class PostViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user)
 
     def update(self, request, *args, **kwargs):
-        """Poszt módosítása részlegesen (PATCH) vagy teljesen (PUT)"""
         partial = kwargs.pop('partial', False)
         instance = self.get_object()
         
